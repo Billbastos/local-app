@@ -6,7 +6,7 @@ const About = () => {
     const [joke, setJoke] = useState(null)
 
     useEffect(() => {
-        if (joke) {
+        if (joke !== null) {
             window.analytics.track("got dad joke", {
                 joke
             })
