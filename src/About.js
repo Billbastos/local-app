@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from '@emotion/styled'
 
 const About = () => {
 
     const [joke, setJoke] = useState(null)
+
+    useEffect(() => {
+        window.analytics.track("got dad joke", {
+            joke
+        })
+    }, [joke])
 
     const openEasterEgg = async () => {
         const res = await fetch('https://icanhazdadjoke.com/', {
