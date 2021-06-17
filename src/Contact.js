@@ -5,8 +5,8 @@ const Contact = () => {
         <div>
             <h1>Contact info</h1>
             <main>
-                <span><A target='blank' href='https://github.com/Billbastos'>github.com/Billbastos</A></span>
-                <span><A target='blank' href='pages/external'>leaving the react app 👋🏻</A></span>
+                <div><A target='blank' href='https://github.com/Billbastos'>github.com/Billbastos</A></div>
+                <div><A target='blank' href='../local-app/pages/external.html'>leaving the react app 👋🏻</A></div>
             </main>
         </div>
     );
