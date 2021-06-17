@@ -7,8 +7,9 @@ const About = () => {
 
     useEffect(() => {
         if (joke !== null) {
-            window.analytics.track("got dad joke", {
-                joke
+            window.analytics.track("Joke Viewed", { // Event naming 101 (Object-Action framework)
+                joke: joke.joke,
+                joke_id: joke.id
             })
         }
     }, [joke])
@@ -19,14 +20,14 @@ const About = () => {
                 'Accept': 'application/json',
             },
         }).then(d => d.json())
-        setJoke(res.joke)
+        setJoke(res)
     }
 
     return ( 
         <div>
             <h1 onClick={openEasterEgg}>Gui's company</h1>
             <p><Emoji>👋🏻</Emoji> We are the Gui's company</p>
-            { joke && <Joke>{joke} 😂</Joke> }
+            { joke && <Joke>{joke.joke} 😂</Joke> }
         </div>
      );
 }
