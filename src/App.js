@@ -7,7 +7,7 @@ import Home from './Home'
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/local-app"> 
         <div>
           <nav>
             <ul>
