@@ -62,6 +62,7 @@ const Nav = styled.nav`
 const Ul = styled.ul`
   display: inline;
   list-style: none;
+  padding: 0;
 `
 
 const Li = styled.li`
