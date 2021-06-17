@@ -6,9 +6,11 @@ const About = () => {
     const [joke, setJoke] = useState(null)
 
     useEffect(() => {
-        window.analytics.track("got dad joke", {
-            joke
-        })
+        if (joke) {
+            window.analytics.track("got dad joke", {
+                joke
+            })
+        }
     }, [joke])
 
     const openEasterEgg = async () => {
