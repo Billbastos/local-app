@@ -14,6 +14,10 @@ const About = () => {
         }
     }, [joke])
 
+    useEffect(() => {
+        window.analytics.page('About')
+    }, [])
+
     const openEasterEgg = async () => {
         const res = await fetch('https://icanhazdadjoke.com/', {
             headers: {

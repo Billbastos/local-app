@@ -1,6 +1,12 @@
-import {A} from './css/shared'
+import { useEffect } from 'react';
+import { A } from './css/shared'
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.analytics.page('Contact')
+    }, [])
+
     return (
         <div>
             <h1>Contact info</h1>
