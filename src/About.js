@@ -11,7 +11,7 @@ const About = () => {
                 joke: joke.joke,
                 joke_id: joke.id
             })
-            rudderanalytics.track("Joke Viewed", {
+            window.rudderanalytics.track("Joke Viewed", {
                 joke: joke.joke,
                 joke_id: joke.id
             }, () => console.log("Joke Clicked"));
