@@ -5,6 +5,9 @@ const Contact = () => {
 
     useEffect(() => {
         window.analytics.page('Contact')
+        rudderanalytics.page('contact', 'Contact', () => {
+            console.log("contact page call");
+        });
     }, [])
 
     return (
