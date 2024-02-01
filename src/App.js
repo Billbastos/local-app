@@ -8,7 +8,6 @@ const App = () => {
   return (
     <StyledApp>
       <Router basename="/local-app">
-       
         <Nav>
           <Ul>
             <Li>
